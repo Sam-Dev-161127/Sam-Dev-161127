@@ -1,10 +1,9 @@
 <h1 align="left">Hey 👋 What's up?</h1>
 
 <!-- 🧑‍💻 ABOUT BOX -->
-<table width="850" align="center">
+<table width="850">
 <tr>
-
-<td width="425" valign="top">
+<td width="600">
 
 <h2>👨‍💻 About Me</h2>
 
@@ -21,20 +20,17 @@ Email me 👉 sam.dev1611@gmail.com
 
 </td>
 
-<td width="425" align="center" valign="top">
+<td width="250">
 
-<img src="https://media.giphy.com/media/M9gbBd9nbDrOTu1Mqx/giphy.gif" width="180"/><br><br>
-<img src="https://i.imgflip.com/65efzo.gif" width="180"/>
+<img src="https://media.giphy.com/media/M9gbBd9nbDrOTu1Mqx/giphy.gif" width="200"/><br><br>
+<img src="https://i.imgflip.com/65efzo.gif" width="200"/>
 
 </td>
-
 </tr>
 </table>
 
-<br>
-
 <!-- 💻 SKILLS BOX -->
-<table width="850" align="center">
+<table width="850">
 <tr>
 <td>
 
@@ -56,12 +52,10 @@ Email me 👉 sam.dev1611@gmail.com
 </tr>
 </table>
 
-<br>
-
 <!-- 🌐 SOCIAL BOX -->
-<table width="850" align="center">
+<table width="850">
 <tr>
-<td align="center">
+<td>
 
 <h2>🌐 Social Media</h2>
 
@@ -85,39 +79,31 @@ Email me 👉 sam.dev1611@gmail.com
 </tr>
 </table>
 
-<br>
-
 <!-- 📊 STATS BOX -->
-<table width="850" align="center">
+<table width="850">
 <tr>
-<td align="center">
+<td>
 
 <h2>🔥 My Stats</h2>
 
-<img src="https://github-readme-stats.vercel.app/api?username=Sam-Dev-161127&show_icons=true&theme=tokyonight" height="160"/>
+<img src="https://github-readme-stats.vercel.app/api?username=Sam-Dev-161127&show_icons=true&theme=tokyonight" height="150"/>
 
-<br><br>
+<img src="https://github-readme-stats.vercel.app/api/top-langs?username=Sam-Dev-161127&layout=compact&theme=tokyonight" height="150"/>
 
-<img src="https://github-readme-stats.vercel.app/api/top-langs?username=Sam-Dev-161127&layout=compact&theme=tokyonight" height="160"/>
-
-<br><br>
-
-<img src="https://streak-stats.demolab.com?user=Sam-Dev-161127&theme=tokyonight" height="160"/>
+<img src="https://streak-stats.demolab.com?user=Sam-Dev-161127&theme=tokyonight" height="150"/>
 
 </td>
 </tr>
 </table>
 
-<br>
-
-<!-- 🐍 SNAKE BOX (DARK ONLY FIX) -->
-<table width="850" align="center">
+<!-- 🐍 SNAKE BOX -->
+<table width="850">
 <tr>
-<td align="center">
+<td>
 
 <h2>🐍 Contribution Snake</h2>
 
-<img src="https://raw.githubusercontent.com/Sam-Dev-161127/Sam-Dev-161127/output/github-contribution-grid-snake.svg#gh-dark-mode-only"/>
+<img src="https://github.com/Sam-Dev-161127/Sam-Dev-161127/blob/output/github-contribution-grid-snake.svg"/>
 
 </td>
 </tr>
