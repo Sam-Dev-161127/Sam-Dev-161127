@@ -1,10 +1,9 @@
-<h1 align="left">Hey 👋 What's up?</h1>
-
 <table width="100%" cellspacing="0" cellpadding="8" border="1">
 
   <!-- 🧑‍💻 ABOUT -->
   <tr>
     <td width="70%">
+      <h1>Hey 👋 What's up?</h1>
       <h2>👨‍💻 About Me</h2>
       Hi, I'm Sameer Patra 👋, a student 🎓 from Balasore, Odisha, India 🇮🇳.<br>
       Email me 👉 sam.dev1611@gmail.com
@@ -62,9 +61,9 @@
   <tr>
     <td colspan="2" align="center">
       <h2>🔥 My Stats</h2>
-      <img src="https://github-readme-stats-git-masterrstaa-rickstaa.vercel.app/api?username=Sam-Dev-161127&show_icons=true&theme=tokyonight&hide_border=true" height="150"/>
+      <img src="https://github-readme-stats.vercel.app/api?username=Sam-Dev-161127&show_icons=true&theme=tokyonight&hide_border=true&count_private=true" height="150"/>
       &nbsp;
-      <img src="https://github-readme-stats-git-masterrstaa-rickstaa.vercel.app/api/top-langs?username=Sam-Dev-161127&layout=compact&theme=tokyonight&hide_border=true" height="150"/>
+      <img src="https://github-readme-stats.vercel.app/api/top-langs?username=Sam-Dev-161127&layout=compact&theme=tokyonight&hide_border=true&count_private=true" height="150"/>
       <br/>
       <img src="https://streak-stats.demolab.com/?user=Sam-Dev-161127&theme=tokyonight&hide_border=true" height="150"/>
     </td>
