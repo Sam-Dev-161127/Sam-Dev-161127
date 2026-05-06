@@ -1,17 +1,16 @@
-<h1 align="center">Hey 👋 What's up?</h1>
+<h1 align="left">Hey 👋 What's up?</h1>
 
 <!-- 🧑‍💻 ABOUT BOX -->
-<div align="center">
 <table>
 <tr>
-<td width="500">
+<td width="600">
 
 <h2>👨‍💻 About Me</h2>
 
 Hi, I’m Sameer Patra 👋, a student 🎓 from Balasore, Odisha, India 🇮🇳.<br>
 Email me 👉 sam.dev1611@gmail.com  
 
-<br>
+<br><br>
 
 ✨ Creating bugs since 2024 🐛<br>
 📚 Learning Python, Web Dev & Robotics 🤖<br>
@@ -21,20 +20,16 @@ Email me 👉 sam.dev1611@gmail.com
 
 </td>
 
-<td width="220" align="center">
+<td width="220">
 
-<img src="https://media.giphy.com/media/M9gbBd9nbDrOTu1Mqx/giphy.gif" width="180"/><br><br>
-<img src="https://i.imgflip.com/65efzo.gif" width="180"/>
+<img src="https://media.giphy.com/media/M9gbBd9nbDrOTu1Mqx/giphy.gif" width="200"/><br><br>
+<img src="https://i.imgflip.com/65efzo.gif" width="200"/>
 
 </td>
 </tr>
 </table>
-</div>
-
-<br>
 
 <!-- 💻 SKILLS BOX -->
-<div align="center">
 <table>
 <tr>
 <td>
@@ -56,12 +51,8 @@ Email me 👉 sam.dev1611@gmail.com
 </td>
 </tr>
 </table>
-</div>
-
-<br>
 
 <!-- 🌐 SOCIAL BOX -->
-<div align="center">
 <table>
 <tr>
 <td>
@@ -87,12 +78,8 @@ Email me 👉 sam.dev1611@gmail.com
 </td>
 </tr>
 </table>
-</div>
-
-<br>
 
 <!-- 📊 STATS BOX -->
-<div align="center">
 <table>
 <tr>
 <td>
@@ -100,20 +87,16 @@ Email me 👉 sam.dev1611@gmail.com
 <h2>🔥 My Stats</h2>
 
 <img src="https://github-readme-stats.vercel.app/api?username=Sam-Dev-161127&show_icons=true&theme=tokyonight" height="150"/>
-
+<br>
 <img src="https://github-readme-stats.vercel.app/api/top-langs?username=Sam-Dev-161127&layout=compact&theme=tokyonight" height="150"/>
-
+<br>
 <img src="https://streak-stats.demolab.com?user=Sam-Dev-161127&theme=tokyonight" height="150"/>
 
 </td>
 </tr>
 </table>
-</div>
-
-<br>
 
 <!-- 🐍 SNAKE BOX -->
-<div align="center">
 <table>
 <tr>
 <td>
@@ -125,4 +108,3 @@ Email me 👉 sam.dev1611@gmail.com
 </td>
 </tr>
 </table>
-</div>
