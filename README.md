@@ -1,7 +1,9 @@
 <h1 align="center">Hey 👋 What's up?</h1>
 
+<!-- COMMON STYLE WRAPPER -->
+<table align="center" width="850">
+
 <!-- ABOUT -->
-<table width="100%">
 <tr>
 <td style="border:1px solid #444; border-radius:10px; padding:15px;">
 
@@ -20,12 +22,8 @@ Email 👉 sam.dev1611@gmail.com
 
 </td>
 </tr>
-</table>
-
-<br>
 
 <!-- GIF -->
-<table width="100%">
 <tr>
 <td align="center" style="border:1px solid #444; border-radius:10px; padding:15px;">
 
@@ -35,12 +33,8 @@ Email 👉 sam.dev1611@gmail.com
 
 </td>
 </tr>
-</table>
-
-<br>
 
 <!-- SKILLS -->
-<table width="100%">
 <tr>
 <td style="border:1px solid #444; border-radius:10px; padding:15px;">
 
@@ -56,12 +50,8 @@ Email 👉 sam.dev1611@gmail.com
 
 </td>
 </tr>
-</table>
-
-<br>
 
 <!-- SOCIAL -->
-<table width="100%">
 <tr>
 <td align="center" style="border:1px solid #444; border-radius:10px; padding:15px;">
 
@@ -85,35 +75,38 @@ Email 👉 sam.dev1611@gmail.com
 
 </td>
 </tr>
-</table>
 
-<br>
-
-<!-- STATS -->
-<table width="100%">
+<!-- STATS FIXED -->
 <tr>
 <td align="center" style="border:1px solid #444; border-radius:10px; padding:15px;">
 
 <h2>🔥 My Stats</h2>
 
-<img src="https://github-readme-stats.vercel.app/api?username=Sam-Dev-161127&show_icons=true&theme=tokyonight" height="150"/>
+<!-- GRID FIX: ensures all 3 show properly -->
+<table>
+<tr>
+<td>
+<img src="https://github-readme-stats.vercel.app/api?username=Sam-Dev-161127&show_icons=true&theme=tokyonight" height="170"/>
+</td>
+</tr>
 
-<br><br>
+<tr>
+<td>
+<img src="https://github-readme-stats.vercel.app/api/top-langs?username=Sam-Dev-161127&layout=compact&theme=tokyonight" height="170"/>
+</td>
+</tr>
 
-<img src="https://github-readme-stats.vercel.app/api/top-langs?username=Sam-Dev-161127&layout=compact&theme=tokyonight" height="150"/>
-
-<br><br>
-
-<img src="https://streak-stats.demolab.com?user=Sam-Dev-161127&theme=tokyonight" height="150"/>
-
+<tr>
+<td>
+<img src="https://streak-stats.demolab.com?user=Sam-Dev-161127&theme=tokyonight" height="170"/>
 </td>
 </tr>
 </table>
 
-<br>
+</td>
+</tr>
 
-<!-- SNAKE (DARK ONLY FIX) -->
-<table width="100%">
+<!-- SNAKE DARK ONLY -->
 <tr>
 <td align="center" style="border:1px solid #444; border-radius:10px; padding:15px;">
 
@@ -123,4 +116,5 @@ Email 👉 sam.dev1611@gmail.com
 
 </td>
 </tr>
+
 </table>
