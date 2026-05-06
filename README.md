@@ -1,11 +1,12 @@
 <h1 align="center">Hey 👋 What's up?</h1>
 
-<!-- COMMON STYLE WRAPPER -->
-<table align="center" width="850">
+<br>
 
-<!-- ABOUT -->
+<!-- ABOUT SECTION -->
+<table align="center" width="850">
 <tr>
-<td style="border:1px solid #444; border-radius:10px; padding:15px;">
+
+<td width="600" style="vertical-align:top;">
 
 <h2>👨‍💻 About Me</h2>
 
@@ -15,30 +16,39 @@ Email 👉 sam.dev1611@gmail.com
 <br><br>
 
 ✨ Creating bugs since 2024 🐛<br>
-📚 Learning Python, Web Dev & Robotics 🤖<br>
-🎯 Goal: Become an engineer 🚀<br>
-🎮 Building games with Godot 🎮<br>
-🎨 Canva & PowerPoint designer 💡
+📚 Currently learning Python, Web Development & Robotics 🤖<br>
+🎯 Goal: Become a skilled engineer and build cool tech 🚀<br>
+🎮 Exploring game development with Godot<br>
+🎨 I enjoy designing presentations using Canva & PowerPoint 💡
 
 </td>
-</tr>
 
-<!-- GIF -->
+<td width="250" align="center">
+<img height="200" src="https://media.giphy.com/media/M9gbBd9nbDrOTu1Mqx/giphy.gif"/>
+</td>
+
+</tr>
+</table>
+
+<br>
+
+<!-- SECOND GIF -->
+<table align="center" width="850">
 <tr>
-<td align="center" style="border:1px solid #444; border-radius:10px; padding:15px;">
-
-<img src="https://media.giphy.com/media/M9gbBd9nbDrOTu1Mqx/giphy.gif" width="180"/>
-&nbsp;&nbsp;
-<img src="https://i.imgflip.com/65efzo.gif" width="180"/>
-
+<td align="center">
+<img height="200" src="https://i.imgflip.com/65efzo.gif"/>
 </td>
 </tr>
+</table>
+
+<br>
 
 <!-- SKILLS -->
+<table align="center" width="850">
 <tr>
-<td style="border:1px solid #444; border-radius:10px; padding:15px;">
+<td>
 
-<h2>💻 Languages, Tools & OS</h2>
+<h2>💻 Languages, 🛠️ Tools & OS</h2>
 
 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" height="40"/>
 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/c/c-original.svg" height="40"/>
@@ -46,14 +56,20 @@ Email 👉 sam.dev1611@gmail.com
 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/godot/godot-original.svg" height="40"/>
 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" height="40"/>
 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" height="40"/>
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/windows8/windows8-original.svg" height="40"/>
 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg" height="40"/>
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/arduino/arduino-original.svg" height="40"/>
 
 </td>
 </tr>
+</table>
+
+<br>
 
 <!-- SOCIAL -->
+<table align="center" width="850">
 <tr>
-<td align="center" style="border:1px solid #444; border-radius:10px; padding:15px;">
+<td align="center">
 
 <h2>🌐 Social Media</h2>
 
@@ -75,40 +91,38 @@ Email 👉 sam.dev1611@gmail.com
 
 </td>
 </tr>
+</table>
+
+<br>
 
 <!-- STATS FIXED -->
+<table align="center" width="850">
 <tr>
-<td align="center" style="border:1px solid #444; border-radius:10px; padding:15px;">
+<td align="center">
 
 <h2>🔥 My Stats</h2>
 
-<!-- GRID FIX: ensures all 3 show properly -->
-<table>
-<tr>
-<td>
-<img src="https://github-readme-stats.vercel.app/api?username=Sam-Dev-161127&show_icons=true&theme=tokyonight" height="170"/>
-</td>
-</tr>
+<!-- STACK FIX: prevents cutting -->
+<img src="https://github-readme-stats.vercel.app/api?username=Sam-Dev-161127&theme=dracula" height="160"/>
 
-<tr>
-<td>
-<img src="https://github-readme-stats.vercel.app/api/top-langs?username=Sam-Dev-161127&layout=compact&theme=tokyonight" height="170"/>
-</td>
-</tr>
+<br><br>
 
-<tr>
-<td>
-<img src="https://streak-stats.demolab.com?user=Sam-Dev-161127&theme=tokyonight" height="170"/>
+<img src="https://github-readme-stats.vercel.app/api/top-langs?username=Sam-Dev-161127&layout=compact&theme=dracula" height="160"/>
+
+<br><br>
+
+<img src="https://streak-stats.demolab.com?user=Sam-Dev-161127&theme=dracula" height="160"/>
+
 </td>
 </tr>
 </table>
 
-</td>
-</tr>
+<br>
 
-<!-- SNAKE DARK ONLY -->
+<!-- SNAKE (DARK FIX) -->
+<table align="center" width="850">
 <tr>
-<td align="center" style="border:1px solid #444; border-radius:10px; padding:15px;">
+<td align="center">
 
 <h2>🐍 Contribution Snake</h2>
 
@@ -116,5 +130,4 @@ Email 👉 sam.dev1611@gmail.com
 
 </td>
 </tr>
-
 </table>
