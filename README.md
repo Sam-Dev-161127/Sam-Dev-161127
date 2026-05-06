@@ -1,27 +1,34 @@
 <h1 align="left">Hey 👋 What's up?</h1>
 
-<div align="right">
-  <img height="200" src="https://media.giphy.com/media/M9gbBd9nbDrOTu1Mqx/giphy.gif"/>
-</div>
+<table>
+<tr>
+<td>
 
-<p align="left">
 Hi, I’m Sameer Patra 👋, a student 🎓 from Balasore, Odisha, India 🇮🇳.<br>
 Email me 👉 sam.dev1611@gmail.com
-</p>
 
-<h2 align="left">👨‍💻 About Me:</h2>
+<br><br>
 
-<div align="right">
-  <img height="200" src="https://i.imgflip.com/65efzo.gif"/>
-</div>
+<h2>👨‍💻 About Me:</h2>
 
-<p align="left">
 ✨ Creating bugs since 2024 🐛<br>
 📚 Currently learning Python, Web Development & Robotics 🤖<br>
 🎯 Goal: Become a skilled engineer and build cool tech 🚀<br>
-🎮 Exploring game development with Godot<br>
+🎮 Exploring game development with Godot 🎮<br>
 🎨 I enjoy designing presentations using Canva & PowerPoint 💡
-</p>
+
+</td>
+
+<td width="220">
+
+<img src="https://media.giphy.com/media/M9gbBd9nbDrOTu1Mqx/giphy.gif" width="200"/><br><br>
+<img src="https://i.imgflip.com/65efzo.gif" width="200"/>
+
+</td>
+</tr>
+</table>
+
+<br>
 
 <h2 align="left">💻 Languages, 🛠️Tools & OS:</h2>
 
@@ -49,26 +56,31 @@ Email me 👉 sam.dev1611@gmail.com
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/arduino/arduino-original.svg" height="40"/>
 </div>
 
+<br>
+
 <h2 align="left">🌐 Social Media:</h2>
 
 <div align="left">
-  <a href="https://www.linkedin.com/in/sameer-patra-2b17a83a7" target="_blank">
-    <img src="https://raw.githubusercontent.com/maurodesouza/profile-readme-generator/master/src/assets/icons/social/linkedin/default.svg" width="52" height="40"/>
+  <a href="https://www.linkedin.com/in/sameer-patra-2b17a83a7">
+    <img src="https://raw.githubusercontent.com/maurodesouza/profile-readme-generator/master/src/assets/icons/social/linkedin/default.svg" width="40"/>
   </a>
-  <a href="https://x.com/Sam_Dev_161127" target="_blank">
-    <img src="https://raw.githubusercontent.com/maurodesouza/profile-readme-generator/master/src/assets/icons/social/twitter/default.svg" width="52" height="40"/>
+  
+  <a href="https://x.com/Sam_Dev_161127">
+    <img src="https://raw.githubusercontent.com/maurodesouza/profile-readme-generator/master/src/assets/icons/social/twitter/default.svg" width="40"/>
   </a>
-  <a href="https://t.me/Sameer161127" target="_blank">
-    <img src="https://raw.githubusercontent.com/maurodesouza/profile-readme-generator/master/src/assets/icons/social/telegram/default.svg" width="52" height="40"/>
+  
+  <a href="https://t.me/Sameer161127">
+    <img src="https://raw.githubusercontent.com/maurodesouza/profile-readme-generator/master/src/assets/icons/social/telegram/default.svg" width="40"/>
   </a>
-  <a href="https://www.instagram.com/sam.dev.161127" target="_blank">
-    <img src="https://raw.githubusercontent.com/maurodesouza/profile-readme-generator/master/src/assets/icons/social/instagram/default.svg" width="52" height="40"/>
+  
+  <a href="https://www.instagram.com/sam.dev.161127">
+    <img src="https://raw.githubusercontent.com/maurodesouza/profile-readme-generator/master/src/assets/icons/social/instagram/default.svg" width="40"/>
   </a>
 </div>
 
-<h2 align="left">🔥My Stats:</h2>
+<br>
 
-<br clear="both">
+<h2 align="left">🔥 My Stats:</h2>
 
 <div align="center">
   <img src="https://github-readme-stats.vercel.app/api?username=Sam-Dev-161127&show_icons=true&theme=dracula" height="150"/>
@@ -78,5 +90,5 @@ Email me 👉 sam.dev1611@gmail.com
 
 <br><br>
 
-<!-- SNAKE FIX -->
-<img src="https://github.com/Sam-Dev-161127/Sam-Dev-161127/blob/output/github-contribution-grid-snake.svg" alt="snake animation"/>
+<!-- 🐍 Snake Animation -->
+<img src="https://github.com/Sam-Dev-161127/Sam-Dev-161127/blob/output/github-contribution-grid-snake.svg" />
