@@ -1,14 +1,19 @@
-<h1 align="left">Hey 👋 What's up?</h1>
+<h1 align="center">Hey 👋 What's up?</h1>
 
-<!-- 🧑‍💻 ABOUT BOX -->
-<table width="850">
+<!-- WRAPPER -->
+<table width="100%" align="center">
 <tr>
-<td width="600">
+
+<!-- ABOUT BOX -->
+<td width="33%" valign="top">
+<table width="100%" style="border:1px solid #444; border-radius:10px; padding:10px;">
+<tr>
+<td>
 
 <h2>👨‍💻 About Me</h2>
 
 Hi, I’m Sameer Patra 👋, a student 🎓 from Balasore, Odisha, India 🇮🇳.<br>
-Email me 👉 sam.dev1611@gmail.com  
+Email 👉 sam.dev1611@gmail.com  
 
 <br><br>
 
@@ -19,70 +24,84 @@ Email me 👉 sam.dev1611@gmail.com
 🎨 Canva & PowerPoint designer 💡
 
 </td>
+</tr>
+</table>
+</td>
 
-<td width="250">
+<!-- GIF BOX -->
+<td width="33%" valign="top">
+<table width="100%" style="border:1px solid #444; border-radius:10px; padding:10px;">
+<tr>
+<td align="center">
 
-<img src="https://media.giphy.com/media/M9gbBd9nbDrOTu1Mqx/giphy.gif" width="200"/><br><br>
-<img src="https://i.imgflip.com/65efzo.gif" width="200"/>
+<img src="https://media.giphy.com/media/M9gbBd9nbDrOTu1Mqx/giphy.gif" width="180"/><br><br>
+<img src="https://i.imgflip.com/65efzo.gif" width="180"/>
 
 </td>
 </tr>
 </table>
+</td>
 
-<!-- 💻 SKILLS BOX -->
-<table width="850">
+<!-- SKILLS BOX -->
+<td width="33%" valign="top">
+<table width="100%" style="border:1px solid #444; border-radius:10px; padding:10px;">
 <tr>
 <td>
 
-<h2>💻 Languages, Tools & OS</h2>
+<h2>💻 Skills</h2>
 
-<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" height="40"/>
-<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/c/c-original.svg" height="40"/>
-<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" height="40"/>
-<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/godot/godot-original.svg" height="40"/>
-<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" height="40"/>
-<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pycharm/pycharm-original.svg" height="40"/>
-<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" height="40"/>
-<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/windows8/windows8-original.svg" height="40"/>
-<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg" height="40"/>
-<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/raspberrypi/raspberrypi-original.svg" height="40"/>
-<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/arduino/arduino-original.svg" height="40"/>
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" height="35"/>
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/c/c-original.svg" height="35"/>
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" height="35"/>
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/godot/godot-original.svg" height="35"/>
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" height="35"/>
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" height="35"/>
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/windows8/windows8-original.svg" height="35"/>
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg" height="35"/>
 
 </td>
 </tr>
 </table>
+</td>
 
-<!-- 🌐 SOCIAL BOX -->
-<table width="850">
+</tr>
+</table>
+
+---
+
+<!-- SOCIAL -->
+<table width="100%" align="center">
 <tr>
-<td>
+<td align="center" style="border:1px solid #444; border-radius:10px; padding:10px;">
 
 <h2>🌐 Social Media</h2>
 
 <a href="https://www.linkedin.com/in/sameer-patra-2b17a83a7">
-<img src="https://raw.githubusercontent.com/maurodesouza/profile-readme-generator/master/src/assets/icons/social/linkedin/default.svg" width="40"/>
+<img src="https://raw.githubusercontent.com/maurodesouza/profile-readme-generator/master/src/assets/icons/social/linkedin/default.svg" width="35"/>
 </a>
 
 <a href="https://x.com/Sam_Dev_161127">
-<img src="https://raw.githubusercontent.com/maurodesouza/profile-readme-generator/master/src/assets/icons/social/twitter/default.svg" width="40"/>
+<img src="https://raw.githubusercontent.com/maurodesouza/profile-readme-generator/master/src/assets/icons/social/twitter/default.svg" width="35"/>
 </a>
 
 <a href="https://t.me/Sameer161127">
-<img src="https://raw.githubusercontent.com/maurodesouza/profile-readme-generator/master/src/assets/icons/social/telegram/default.svg" width="40"/>
+<img src="https://raw.githubusercontent.com/maurodesouza/profile-readme-generator/master/src/assets/icons/social/telegram/default.svg" width="35"/>
 </a>
 
 <a href="https://www.instagram.com/sam.dev.161127">
-<img src="https://raw.githubusercontent.com/maurodesouza/profile-readme-generator/master/src/assets/icons/social/instagram/default.svg" width="40"/>
+<img src="https://raw.githubusercontent.com/maurodesouza/profile-readme-generator/master/src/assets/icons/social/instagram/default.svg" width="35"/>
 </a>
 
 </td>
 </tr>
 </table>
 
-<!-- 📊 STATS BOX -->
-<table width="850">
+---
+
+<!-- STATS -->
+<table width="100%" align="center">
 <tr>
-<td>
+<td align="center" style="border:1px solid #444; border-radius:10px; padding:10px;">
 
 <h2>🔥 My Stats</h2>
 
@@ -96,14 +115,17 @@ Email me 👉 sam.dev1611@gmail.com
 </tr>
 </table>
 
-<!-- 🐍 SNAKE BOX -->
-<table width="850">
+---
+
+<!-- SNAKE (FIXED) -->
+<table width="100%" align="center">
 <tr>
-<td>
+<td align="center" style="border:1px solid #444; border-radius:10px; padding:10px;">
 
 <h2>🐍 Contribution Snake</h2>
 
-<img src="https://github.com/Sam-Dev-161127/Sam-Dev-161127/blob/output/github-contribution-grid-snake.svg"/>
+<img src="https://raw.githubusercontent.com/Sam-Dev-161127/Sam-Dev-161127/output/github-contribution-grid-snake.svg#gh-dark-mode-only"/>
+<img src="https://raw.githubusercontent.com/Sam-Dev-161127/Sam-Dev-161127/output/github-contribution-grid-snake.svg#gh-light-mode-only"/>
 
 </td>
 </tr>
