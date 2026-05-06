@@ -1,7 +1,7 @@
 <h1 align="left">Hey 👋 What's up?</h1>
 
 <!-- 🧑‍💻 ABOUT BOX -->
-<table>
+<table width="850">
 <tr>
 <td width="600">
 
@@ -15,12 +15,12 @@ Email me 👉 sam.dev1611@gmail.com
 ✨ Creating bugs since 2024 🐛<br>
 📚 Learning Python, Web Dev & Robotics 🤖<br>
 🎯 Goal: Become an engineer 🚀<br>
-🎮 Building games with Godot<br>
+🎮 Building games with Godot 🎮<br>
 🎨 Canva & PowerPoint designer 💡
 
 </td>
 
-<td width="220">
+<td width="250">
 
 <img src="https://media.giphy.com/media/M9gbBd9nbDrOTu1Mqx/giphy.gif" width="200"/><br><br>
 <img src="https://i.imgflip.com/65efzo.gif" width="200"/>
@@ -30,7 +30,7 @@ Email me 👉 sam.dev1611@gmail.com
 </table>
 
 <!-- 💻 SKILLS BOX -->
-<table>
+<table width="850">
 <tr>
 <td>
 
@@ -53,7 +53,7 @@ Email me 👉 sam.dev1611@gmail.com
 </table>
 
 <!-- 🌐 SOCIAL BOX -->
-<table>
+<table width="850">
 <tr>
 <td>
 
@@ -80,16 +80,16 @@ Email me 👉 sam.dev1611@gmail.com
 </table>
 
 <!-- 📊 STATS BOX -->
-<table>
+<table width="850">
 <tr>
 <td>
 
 <h2>🔥 My Stats</h2>
 
 <img src="https://github-readme-stats.vercel.app/api?username=Sam-Dev-161127&show_icons=true&theme=tokyonight" height="150"/>
-<br>
+
 <img src="https://github-readme-stats.vercel.app/api/top-langs?username=Sam-Dev-161127&layout=compact&theme=tokyonight" height="150"/>
-<br>
+
 <img src="https://streak-stats.demolab.com?user=Sam-Dev-161127&theme=tokyonight" height="150"/>
 
 </td>
@@ -97,7 +97,7 @@ Email me 👉 sam.dev1611@gmail.com
 </table>
 
 <!-- 🐍 SNAKE BOX -->
-<table>
+<table width="850">
 <tr>
 <td>
 
