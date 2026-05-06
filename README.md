@@ -62,10 +62,11 @@
   <tr>
     <td colspan="2" align="center">
       <h2>🔥 My Stats</h2>
-      <img src="https://github-readme-stats.vercel.app/api?username=Sam-Dev-161127&show_icons=true&theme=tokyonight&hide_border=true" height="150"/>
-      <img src="https://github-readme-stats.vercel.app/api/top-langs?username=Sam-Dev-161127&layout=compact&theme=tokyonight&hide_border=true" height="150"/>
+      <img src="https://github-readme-stats.vercel.app/api?username=Sam-Dev-161127&show_icons=true&theme=tokyonight&hide_border=true&cache_seconds=1800" height="150"/>
+      &nbsp;
+      <img src="https://github-readme-stats.vercel.app/api/top-langs?username=Sam-Dev-161127&layout=compact&theme=tokyonight&hide_border=true&cache_seconds=1800" height="150"/>
       <br/>
-      <img src="https://streak-stats.demolab.com?user=Sam-Dev-161127&theme=tokyonight&hide_border=true" height="150"/>
+      <img src="https://streak-stats.demolab.com/?user=Sam-Dev-161127&theme=tokyonight&hide_border=true" height="150"/>
     </td>
   </tr>
 
@@ -74,9 +75,9 @@
     <td colspan="2" align="center">
       <h2>🐍 Contribution Snake</h2>
       <picture>
-        <source media="(prefers-color-scheme: dark)" srcset="https://github.com/Sam-Dev-161127/Sam-Dev-161127/blob/output/github-snake-dark.svg"/>
-        <source media="(prefers-color-scheme: light)" srcset="https://github.com/Sam-Dev-161127/Sam-Dev-161127/blob/output/github-contribution-grid-snake.svg"/>
-        <img alt="snake animation" src="https://github.com/Sam-Dev-161127/Sam-Dev-161127/blob/output/github-snake-dark.svg"/>
+        <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/Sam-Dev-161127/Sam-Dev-161127/output/github-snake-dark.svg"/>
+        <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/Sam-Dev-161127/Sam-Dev-161127/output/github-contribution-grid-snake.svg"/>
+        <img alt="snake animation" src="https://raw.githubusercontent.com/Sam-Dev-161127/Sam-Dev-161127/output/github-snake-dark.svg"/>
       </picture>
     </td>
   </tr>
