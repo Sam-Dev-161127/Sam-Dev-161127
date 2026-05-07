@@ -65,7 +65,7 @@
       &nbsp;
       <img src="https://my-readme-stats-zeta.vercel.app/api/top-langs?username=Sam-Dev-161127&layout=compact&theme=tokyonight&hide_border=true" height="150"/>
       <br/>
-      <img src="https://streak-stats.demolab.com/?user=Sam-Dev-161127&theme=tokyonight&hide_border=true" height="150"/>
+      <img src="https://streak-stats.demolab.com/?user=Sam-Dev-161127&theme=tokyonight&hide_border=true&currStreakNum=EB5454&fire=EB5454&currStreakLabel=EB5454" height="150"/>
     </td>
   </tr>
 
