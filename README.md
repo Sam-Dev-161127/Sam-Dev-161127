@@ -1,5 +1,4 @@
 <table width="100%" cellspacing="0" cellpadding="8" border="1">
-
   <tr>
     <td width="70%">
       <h1>Hey 👋 What's up?</h1>
@@ -18,7 +17,6 @@
       <img src="https://i.imgflip.com/65efzo.gif" width="200"/>
     </td>
   </tr>
-
   <tr>
     <td colspan="2">
       <h2>💻 Languages, Tools & OS</h2>
@@ -35,7 +33,6 @@
       <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/arduino/arduino-original.svg" height="40"/>
     </td>
   </tr>
-
   <tr>
     <td colspan="2">
       <h2>🌐 Social Media</h2>
@@ -53,7 +50,6 @@
       </a>
     </td>
   </tr>
-
   <tr>
     <td colspan="2" align="center">
       <h2>🔥 My Stats</h2>
@@ -64,7 +60,6 @@
       <img src="https://streak-stats.demolab.com/?user=Sam-Dev-161127&theme=tokyonight&hide_border=true&currStreakNum=EB5454&fire=EB5454&currStreakLabel=EB5454&sideNums=EB5454&sideLabels=EB5454&ring=EB5454&dates=00FF00" height="150"/>
     </td>
   </tr>
-
   <tr>
     <td colspan="2" align="center">
       <h2>🐍 Contribution Snake</h2>
@@ -75,7 +70,6 @@
       </picture>
     </td>
   </tr>
-
   <tr>
     <td colspan="2" align="center">
       <h2>👾 Pacman Contribution Graph</h2>
@@ -86,5 +80,4 @@
       </picture>
     </td>
   </tr>
-
 </table>
