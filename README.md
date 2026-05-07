@@ -61,11 +61,11 @@
   <tr>
     <td colspan="2" align="center">
       <h2>🔥 My Stats</h2>
-      <img src="https://my-readme-stats-zeta.vercel.app/api?username=Sam-Dev-161127&show_icons=true&theme=tokyonight&hide_border=true&title_color=FF0000&icon_color=FF0000&ring_color=FF0000&text_color=00FF00" height="150"/>
+      <img src="https://my-readme-stats-zeta.vercel.app/api?username=Sam-Dev-161127&show_icons=true&theme=tokyonight&hide_border=true&title_color=00FFFF&icon_color=FF0000&ring_color=FF0000&text_color=00FF00" height="150"/>
       &nbsp;
       <img src="https://my-readme-stats-zeta.vercel.app/api/top-langs?username=Sam-Dev-161127&layout=compact&theme=tokyonight&hide_border=true&title_color=00FFFF&text_color=00FF00" height="150"/>
       <br/>
-      <img src="https://streak-stats.demolab.com/?user=Sam-Dev-161127&theme=tokyonight&hide_border=true&currStreakNum=EB5454&fire=EB5454&currStreakLabel=EB5454&sideNums=00FF00&sideLabels=00FF00&ring=EB5454&dates=00FF00" height="150"/>
+      <img src="https://streak-stats.demolab.com/?user=Sam-Dev-161127&theme=tokyonight&hide_border=true&currStreakNum=EB5454&fire=EB5454&currStreakLabel=EB5454&sideNums=FFA500&sideLabels=FFA500&ring=FF0000&dates=00FF00" height="150"/>
     </td>
   </tr>
 
@@ -85,11 +85,7 @@
   <tr>
     <td colspan="2" align="center">
       <h2>👾 Pacman Contribution Graph</h2>
-      <picture>
-        <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/Sam-Dev-161127/Sam-Dev-161127/output/pacman-contribution-graph-dark.svg"/>
-        <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/Sam-Dev-161127/Sam-Dev-161127/output/pacman-contribution-graph.svg"/>
-        <img alt="pacman contribution graph" src="https://raw.githubusercontent.com/Sam-Dev-161127/Sam-Dev-161127/output/pacman-contribution-graph.svg"/>
-      </picture>
+      <img alt="pacman contribution graph" src="https://raw.githubusercontent.com/Sam-Dev-161127/Sam-Dev-161127/output/pacman-contribution-graph.svg"/>
     </td>
   </tr>
 
