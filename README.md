@@ -1,8 +1,8 @@
 <table width="100%" cellspacing="0" cellpadding="8" border="1">
   <tr>
     <td width="70%">
-      <h1>Hey 👋 What's up?</h1>
-      <h1>Hi Guys!!</h1>
+      <h2>Hey 👋 What's up?</h2>
+      <p><b>Hi Guys!!</b></p>
       <h2>👨‍💻 About Me</h2>
       Hi, I'm Sameer Patra 👋, a student 🎓 from Balasore, Odisha, India 🇮🇳.<br>
       Email me 👉 sam.dev1611@gmail.com
