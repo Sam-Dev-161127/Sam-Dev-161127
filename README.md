@@ -1,6 +1,5 @@
 <table width="100%" cellspacing="0" cellpadding="8" border="1">
 
-  <!-- 🧑‍💻 ABOUT -->
   <tr>
     <td width="70%">
       <h1>Hey 👋 What's up?</h1>
@@ -20,7 +19,6 @@
     </td>
   </tr>
 
-  <!-- 💻 SKILLS -->
   <tr>
     <td colspan="2">
       <h2>💻 Languages, Tools & OS</h2>
@@ -38,7 +36,6 @@
     </td>
   </tr>
 
-  <!-- 🌐 SOCIAL -->
   <tr>
     <td colspan="2">
       <h2>🌐 Social Media</h2>
@@ -57,7 +54,6 @@
     </td>
   </tr>
 
-  <!-- 📊 STATS -->
   <tr>
     <td colspan="2" align="center">
       <h2>🔥 My Stats</h2>
@@ -69,7 +65,6 @@
     </td>
   </tr>
 
-  <!-- 🐍 SNAKE -->
   <tr>
     <td colspan="2" align="center">
       <h2>🐍 Contribution Snake</h2>
@@ -81,7 +76,6 @@
     </td>
   </tr>
 
-  <!-- 👾 PACMAN -->
   <tr>
     <td colspan="2" align="center">
       <h2>👾 Pacman Contribution Graph</h2>
@@ -92,3 +86,5 @@
       </picture>
     </td>
   </tr>
+
+</table>
