@@ -61,9 +61,9 @@
   <tr>
     <td colspan="2" align="center">
       <h2>🔥 My Stats</h2>
-      <img src="https://my-readme-stats-w0dk4yoyc-sam-dev-161127s-projects.vercel.app/api?username=Sam-Dev-161127&show_icons=true&theme=tokyonight&hide_border=true" height="150"/>
+      <img src="https://my-readme-stats-zeta.vercel.app/api?username=Sam-Dev-161127&show_icons=true&theme=tokyonight&hide_border=true" height="150"/>
       &nbsp;
-      <img src="https://my-readme-stats-w0dk4yoyc-sam-dev-161127s-projects.vercel.app/api/top-langs?username=Sam-Dev-161127&layout=compact&theme=tokyonight&hide_border=true" height="150"/>
+      <img src="https://my-readme-stats-zeta.vercel.app/api/top-langs?username=Sam-Dev-161127&layout=compact&theme=tokyonight&hide_border=true" height="150"/>
       <br/>
       <img src="https://streak-stats.demolab.com/?user=Sam-Dev-161127&theme=tokyonight&hide_border=true" height="150"/>
     </td>
