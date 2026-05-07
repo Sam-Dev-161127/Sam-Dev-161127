@@ -13,20 +13,10 @@ jobs:
           outputs: |
             dist/github-contribution-grid-snake.svg
             dist/github-snake-dark.svg?palette=github-dark
-
-      - uses: lowlighter/metrics@latest
-        with:
-          token: ${{ secrets.GITHUB_TOKEN }}
-          user: Sam-Dev-161127
-          plugin_pagespeed: no
-          plugin_isocalendar: yes
-          plugin_isocalendar_duration: full-year
-          filename: dist/pacman-contribution-graph.svg
-          config_display: large
-
       - uses: crazy-max/ghaction-github-pages@v3
         with:
           target_branch: output
+          keep_history: true
           build_dir: dist
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
