@@ -85,8 +85,6 @@
   <tr>
     <td colspan="2" align="center">
       <h2>👾 Pacman Contribution Graph</h2>
-      <img alt="pacman contribution graph" src="https://raw.githubusercontent.com/Sam-Dev-161127/Sam-Dev-161127/output/pacman-contribution-graph.svg"/>
+      <img alt="pacman contribution graph" src="https://pacman-contrib.vercel.app/api?user=Sam-Dev-161127&theme=dark"/>
     </td>
   </tr>
-
-</table>
