@@ -61,35 +61,37 @@ def get_neighbors(c, r, num_cols):
 
 def make_food_path(food_cells, num_cols):
     """
-    Snake always starts from (0,0) top-left corner,
-    visits all food cells via greedy nearest-neighbor,
-    then returns back to (0,0).
+    Snake always starts from (0,0) top-left corner.
+    Uses today's date as random seed so path changes daily.
+    Visits all food cells in random order, then returns to (0,0).
     """
+    import random
+    # Seed with today's date — different path every day
+    random.seed(datetime.now().strftime("%Y-%m-%d"))
+
     if not food_cells:
         return [(0, 0)]
 
-    start = (0, 0)  # always top-left corner of grid
+    start = (0, 0)  # always top-left corner
 
-    # Walk from (0,0) to first nearest food cell
+    # Shuffle food cells for random visit order (changes daily)
+    foods_list = list(food_cells)
+    random.shuffle(foods_list)
+
     path = [start]
-    remaining = set(food_cells)
     current = start
 
-    while remaining:
-        nearest = min(remaining, key=lambda p: abs(p[0]-current[0]) + abs(p[1]-current[1]))
-
-        # Walk step by step to nearest (col first, then row)
+    for target in foods_list:
         c, r = current
-        tc, tr = nearest
+        tc, tr = target
+        # Walk step by step: col first then row
         while c != tc:
             c += 1 if tc > c else -1
             path.append((c, r))
         while r != tr:
             r += 1 if tr > r else -1
             path.append((c, r))
-
-        remaining.discard(nearest)
-        current = nearest
+        current = (tc, tr)
 
     # Return to (0,0)
     c, r = current
@@ -149,7 +151,7 @@ def generate_svg(grid, dark=False):
     frames = simulate(path, food_cells)
 
     total_frames = len(frames)
-    total_dur    = total_frames * 0.13
+    total_dur    = total_frames * 0.18
     keyTimes     = ";".join(f"{i/(max(total_frames-1,1)):.5f}" for i in range(total_frames))
     anim_base    = f'dur="{total_dur:.2f}s" repeatCount="indefinite" keyTimes="{keyTimes}" calcMode="discrete"'
 
