@@ -61,56 +61,43 @@ def get_neighbors(c, r, num_cols):
 
 def make_food_path(food_cells, num_cols):
     """
-    Build a path that visits all food cells using BFS/greedy nearest-neighbor,
-    then returns back to start — giving a natural snake-like route.
+    Snake always starts from (0,0) top-left corner,
+    visits all food cells via greedy nearest-neighbor,
+    then returns back to (0,0).
     """
     if not food_cells:
-        return []
+        return [(0, 0)]
 
-    # Always start from top-left: smallest col, then smallest row
-    foods = sorted(food_cells, key=lambda x: (x[0], x[1]))
-    # Find leftmost column that has food, then topmost row in that column
-    min_col = min(c for c, r in food_cells)
-    start = min(((c, r) for c, r in food_cells if c == min_col), key=lambda x: x[1])
+    start = (0, 0)  # always top-left corner of grid
 
-    # Greedy nearest neighbor through all food cells
+    # Walk from (0,0) to first nearest food cell
     path = [start]
     remaining = set(food_cells)
-    remaining.discard(start)
     current = start
 
     while remaining:
-        # Find nearest unvisited food cell (Manhattan distance)
         nearest = min(remaining, key=lambda p: abs(p[0]-current[0]) + abs(p[1]-current[1]))
-        
-        # Walk from current to nearest step by step (column then row)
+
+        # Walk step by step to nearest (col first, then row)
         c, r = current
         tc, tr = nearest
-        
-        # Move column-wise first
         while c != tc:
-            dc = 1 if tc > c else -1
-            c += dc
+            c += 1 if tc > c else -1
             path.append((c, r))
-        # Then row-wise
         while r != tr:
-            dr = 1 if tr > r else -1
-            r += dr
+            r += 1 if tr > r else -1
             path.append((c, r))
-        
+
         remaining.discard(nearest)
         current = nearest
 
-    # Return to start
+    # Return to (0,0)
     c, r = current
-    tc, tr = start
-    while c != tc:
-        dc = 1 if tc > c else -1
-        c += dc
+    while c != 0:
+        c -= 1
         path.append((c, r))
-    while r != tr:
-        dr = 1 if tr > r else -1
-        r += dr
+    while r != 0:
+        r -= 1
         path.append((c, r))
 
     return path
