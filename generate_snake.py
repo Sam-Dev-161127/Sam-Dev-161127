@@ -228,11 +228,11 @@ def generate_svg(grid, dark=False):
 
         is_head = seg == 0
         fill    = head_c if is_head else snake_c
-        ix = MX + frames[0][0][0] * STEP
-        iy = MY + frames[0][0][1] * STEP
+        ix = MX + 0 * STEP  # always start at col 0
+        iy = MY + 0 * STEP  # always start at row 0
 
         svg.append(
-            f'<rect x="{ix}" y="{iy}" width="{CELL}" height="{CELL}" rx="2" fill="{fill}" opacity="0">'
+            f'<rect x="{ix}" y="{iy}" width="{CELL}" height="{CELL}" rx="2" fill="{fill}" opacity="{ops[0]}">'
             f'<animate attributeName="x" {anim_base} values="{";".join(xs)}"/>'
             f'<animate attributeName="y" {anim_base} values="{";".join(ys)}"/>'
             f'<animate attributeName="width" {anim_base} values="{";".join(szs)}"/>'
