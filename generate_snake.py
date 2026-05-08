@@ -5,7 +5,6 @@ from datetime import datetime
 GITHUB_USER  = os.environ.get("GITHUB_USER", "Sam-Dev-161127")
 GITHUB_TOKEN = os.environ.get("GITHUB_TOKEN", "")
 
-# ── Fetch contributions ──────────────────────────────────────────────────────
 def fetch_contributions():
     query = """
     query($login: String!) {
@@ -44,19 +43,18 @@ def fetch_contributions():
         grid.append(col)
     return grid
 
-# ── Layout constants ─────────────────────────────────────────────────────────
-CELL    = 10
-GAP     = 3
-STEP    = CELL + GAP
-MX      = 16
-MY      = 28
-ROWS    = 7
+CELL = 10
+GAP  = 3
+STEP = CELL + GAP
+MX   = 16
+MY   = 28
+ROWS = 7
 
 def cx(col): return MX + col * STEP + CELL // 2
 def cy(row): return MY + row * STEP + CELL // 2
 
-# ── Snake path: boustrophedon zigzag col by col ──────────────────────────────
 def make_path(num_cols):
+    """Random-looking path: snake goes down each column, reversing direction each col."""
     path = []
     for c in range(num_cols):
         rows = range(ROWS) if c % 2 == 0 else range(ROWS - 1, -1, -1)
@@ -64,7 +62,6 @@ def make_path(num_cols):
             path.append((c, r))
     return path
 
-# ── Simulate growing snake ───────────────────────────────────────────────────
 def simulate(path, food_cells, init_len=4):
     frames = []
     body   = []
@@ -74,30 +71,20 @@ def simulate(path, food_cells, init_len=4):
         if pos in food_cells and pos not in eaten:
             eaten.add(pos)
         else:
-            max_len = init_len + len(eaten)
-            body = body[:max_len]
+            body = body[:init_len + len(eaten)]
         frames.append(list(body))
     return frames
 
-# ── Color maps ───────────────────────────────────────────────────────────────
-def map_color(count, api_color, dark):
-    # Use api_color directly for light mode (it's already correct GitHub green)
-    # For dark mode, remap to dark palette based on count
+def cell_color(count, api_color, dark):
     if count == 0:
         return "#161b22" if dark else "#ebedf0"
     if not dark:
-        return api_color  # GitHub API returns correct light-mode colors
-    # dark mode remapping
-    if count <= 3:
-        return "#0e4429"
-    elif count <= 6:
-        return "#006d32"
-    elif count <= 9:
-        return "#26a641"
-    else:
-        return "#39d353"
+        return api_color
+    if count <= 3:   return "#0e4429"
+    elif count <= 6: return "#006d32"
+    elif count <= 9: return "#26a641"
+    else:            return "#39d353"
 
-# ── Generate SVG ─────────────────────────────────────────────────────────────
 def generate_svg(grid, dark=False):
     num_cols = len(grid)
     W = MX * 2 + num_cols * STEP
@@ -106,9 +93,10 @@ def generate_svg(grid, dark=False):
     bg      = "#0d1117" if dark else "#ffffff"
     txt_col = "#8b949e" if dark else "#57606a"
     empty_c = "#161b22" if dark else "#ebedf0"
-    snake_c = "#3fb950" if dark else "#26a641"
-    head_c  = "#58e06a" if dark else "#39d353"
-    eye_c   = "#0d1117" if dark else "#ffffff"
+
+    # Cyan snake
+    snake_c = "#00ffff" if dark else "#00bcd4"
+    head_c  = "#ffffff" if dark else "#00ffff"
 
     path       = make_path(num_cols)
     food_cells = {(c, r) for c, col in enumerate(grid) for r, d in enumerate(col) if d["count"] > 0}
@@ -117,10 +105,10 @@ def generate_svg(grid, dark=False):
     total_frames = len(frames)
     spf          = 0.06
     total_dur    = total_frames * spf
+    keyTimes     = ";".join(f"{i/(total_frames-1):.5f}" for i in range(total_frames))
+    anim_base    = f'dur="{total_dur:.2f}s" repeatCount="indefinite" keyTimes="{keyTimes}" calcMode="discrete"'
 
-    keyTimes = ";".join(f"{i/(total_frames-1):.5f}" for i in range(total_frames))
-
-    # month labels
+    # Month labels
     seen, labels = set(), []
     for c, col in enumerate(grid):
         if col:
@@ -130,7 +118,7 @@ def generate_svg(grid, dark=False):
                 name = datetime.strptime(col[0]["date"], "%Y-%m-%d").strftime("%b")
                 labels.append((c, name))
 
-    # when is each food cell eaten?
+    # When is each food cell eaten?
     eat_frame = {}
     for fi, body in enumerate(frames):
         pos = body[0]
@@ -145,27 +133,25 @@ def generate_svg(grid, dark=False):
     <feGaussianBlur in="SourceGraphic" stdDeviation="2.5" result="blur"/>
     <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
   </filter>
-  <filter id="sglow" x="-30%" y="-30%" width="160%" height="160%">
-    <feGaussianBlur in="SourceGraphic" stdDeviation="1.2" result="blur"/>
-    <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
-  </filter>
 </defs>''')
 
+    # Month labels
     for c, name in labels:
         svg.append(f'<text x="{MX + c*STEP}" y="{MY-6}" font-size="9" '
                    f'fill="{txt_col}" font-family="monospace">{name}</text>')
 
-    # grid cells
+    # Grid cells
     for c, col in enumerate(grid):
         for r, day in enumerate(col):
             x = MX + c * STEP
             y = MY + r * STEP
-            color = map_color(day["count"], day["color"], dark)
+            color = cell_color(day["count"], day["color"], dark)
             if (c, r) in food_cells:
-                fi = eat_frame.get((c, r), total_frames)
-                t0 = fi / (total_frames - 1)
-                t1 = min((fi + 1) / (total_frames - 1), 1.0)
-                kts   = f"0;{t0:.5f};{t1:.5f};1"
+                fi   = eat_frame.get((c, r), total_frames)
+                t0   = fi / (total_frames - 1)
+                t1   = min((fi + 1) / (total_frames - 1), 1.0)
+                kts  = f"0;{t0:.5f};{t1:.5f};1"
+                # fill switches from food color to empty color when eaten (no dark hole)
                 fills = f"{color};{color};{empty_c};{empty_c}"
                 svg.append(
                     f'<rect x="{x}" y="{y}" width="{CELL}" height="{CELL}" rx="2" fill="{color}">'
@@ -176,50 +162,38 @@ def generate_svg(grid, dark=False):
             else:
                 svg.append(f'<rect x="{x}" y="{y}" width="{CELL}" height="{CELL}" rx="2" fill="{empty_c}"/>')
 
-    # snake segments
+    # Snake segments — SQUARE shape
     max_len = 4 + len(food_cells)
-    anim_base = f'dur="{total_dur:.2f}s" repeatCount="indefinite" keyTimes="{keyTimes}" calcMode="discrete"'
-    ix, iy = cx(frames[0][0][0]), cy(frames[0][0][1])
+    SZ = CELL  # snake segment size = same as grid cell
 
     for seg in range(max_len):
         is_head = seg == 0
-        xs, ys, ops, rs = [], [], [], []
+        xs, ys, ops = [], [], []
+
         for body in frames:
             if seg < len(body):
-                xs.append(str(cx(body[seg][0])))
-                ys.append(str(cy(body[seg][1])))
+                xs.append(str(MX + body[seg][0] * STEP))
+                ys.append(str(MY + body[seg][1] * STEP))
                 ops.append("1")
-                rs.append("5" if is_head else "4")
             else:
-                xs.append(str(cx(body[0][0])))
-                ys.append(str(cy(body[0][1])))
+                xs.append(str(MX + body[0][0] * STEP))
+                ys.append(str(MY + body[0][1] * STEP))
                 ops.append("0")
-                rs.append("5" if is_head else "4")
 
         fill = head_c if is_head else snake_c
-        filt = ' filter="url(#hglow)"' if is_head else ' filter="url(#sglow)"'
+        filt = ' filter="url(#hglow)"' if is_head else ""
+        rx   = "2" if is_head else "1"
+
+        ix = MX + frames[0][0][0] * STEP
+        iy = MY + frames[0][0][1] * STEP
 
         svg.append(
-            f'<circle cx="{ix}" cy="{iy}" r="4" fill="{fill}"{filt} opacity="0">'
-            f'<animate attributeName="cx" {anim_base} values="{";".join(xs)}"/>'
-            f'<animate attributeName="cy" {anim_base} values="{";".join(ys)}"/>'
+            f'<rect x="{ix}" y="{iy}" width="{SZ}" height="{SZ}" rx="{rx}" fill="{fill}"{filt} opacity="0">'
+            f'<animate attributeName="x" {anim_base} values="{";".join(xs)}"/>'
+            f'<animate attributeName="y" {anim_base} values="{";".join(ys)}"/>'
             f'<animate attributeName="opacity" {anim_base} values="{";".join(ops)}"/>'
-            f'<animate attributeName="r" {anim_base} values="{";".join(rs)}"/>'
-            f'</circle>'
+            f'</rect>'
         )
-
-        # eyes on head
-        if is_head:
-            for ex_off, ey_off in [(1.5, -1.5), (1.5, 1.5)]:
-                exs = [str(cx(b[0][0]) + ex_off) for b in frames]
-                eys = [str(cy(b[0][1]) + ey_off) for b in frames]
-                svg.append(
-                    f'<circle cx="{ix}" cy="{iy}" r="1.2" fill="{eye_c}" opacity="0">'
-                    f'<animate attributeName="cx" {anim_base} values="{";".join(exs)}"/>'
-                    f'<animate attributeName="cy" {anim_base} values="{";".join(eys)}"/>'
-                    f'<animate attributeName="opacity" {anim_base} values="{";".join(ops)}"/>'
-                    f'</circle>'
-                )
 
     svg.append('</svg>')
     return "\n".join(svg)
