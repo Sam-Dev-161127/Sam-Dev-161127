@@ -149,7 +149,7 @@ def generate_svg(grid, dark=False):
     frames = simulate(path, food_cells)
 
     total_frames = len(frames)
-    total_dur    = total_frames * 0.08
+    total_dur    = total_frames * 0.13
     keyTimes     = ";".join(f"{i/(max(total_frames-1,1)):.5f}" for i in range(total_frames))
     anim_base    = f'dur="{total_dur:.2f}s" repeatCount="indefinite" keyTimes="{keyTimes}" calcMode="discrete"'
 
