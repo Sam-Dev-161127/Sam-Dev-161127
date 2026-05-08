@@ -80,23 +80,17 @@ def simulate(path, food_cells, init_len=4):
     return frames
 
 # ── Color maps ───────────────────────────────────────────────────────────────
-LIGHT_MAP = {
-    "#ebedf0": "#ebedf0",
-    "#9be9a8": "#9be9a8",
-    "#40c463": "#40c463",
-    "#30a14e": "#30a14e",
-    "#216e39": "#216e39",
-}
-DARK_MAP = {
-    "#ebedf0": "#161b22",
-    "#9be9a8": "#0e4429",
-    "#40c463": "#006d32",
-    "#30a14e": "#26a641",
-    "#216e39": "#39d353",
-}
-
-def map_color(color, dark):
-    return (DARK_MAP if dark else LIGHT_MAP).get(color, color)
+def map_color(count, dark):
+    if count == 0:
+        return "#161b22" if dark else "#ebedf0"
+    elif count <= 3:
+        return "#0e4429" if dark else "#9be9a8"
+    elif count <= 6:
+        return "#006d32" if dark else "#40c463"
+    elif count <= 9:
+        return "#26a641" if dark else "#30a14e"
+    else:
+        return "#39d353" if dark else "#216e39"
 
 # ── Generate SVG ─────────────────────────────────────────────────────────────
 def generate_svg(grid, dark=False):
@@ -161,7 +155,7 @@ def generate_svg(grid, dark=False):
         for r, day in enumerate(col):
             x = MX + c * STEP
             y = MY + r * STEP
-            color = map_color(day["color"] if day["count"] > 0 else "#ebedf0", dark)
+            color = map_color(day["count"], dark)
             if (c, r) in food_cells:
                 fi = eat_frame.get((c, r), total_frames)
                 t0 = fi / (total_frames - 1)
