@@ -180,7 +180,7 @@ def generate_svg(grid, dark=False):
     # snake segments
     max_len = 4 + len(food_cells)
     anim_base = f'dur="{total_dur:.2f}s" repeatCount="indefinite" keyTimes="{keyTimes}" calcMode="discrete"'
-    ix, iy = cx(*frames[0][0]), cy(*frames[0][0])
+    ix, iy = cx(frames[0][0][0]), cy(frames[0][0][1])
 
     for seg in range(max_len):
         is_head = seg == 0
