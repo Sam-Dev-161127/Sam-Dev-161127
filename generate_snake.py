@@ -50,11 +50,8 @@ MX   = 16
 MY   = 28
 ROWS = 7
 
-def cx(col): return MX + col * STEP + CELL // 2
-def cy(row): return MY + row * STEP + CELL // 2
-
 def make_path(num_cols):
-    """Random-looking path: snake goes down each column, reversing direction each col."""
+    # Boustrophedon: zigzag down each column — same as original Platane/snk
     path = []
     for c in range(num_cols):
         rows = range(ROWS) if c % 2 == 0 else range(ROWS - 1, -1, -1)
@@ -93,18 +90,15 @@ def generate_svg(grid, dark=False):
     bg      = "#0d1117" if dark else "#ffffff"
     txt_col = "#8b949e" if dark else "#57606a"
     empty_c = "#161b22" if dark else "#ebedf0"
-
-    # Cyan snake
     snake_c = "#00ffff" if dark else "#00bcd4"
-    head_c  = "#ffffff" if dark else "#00ffff"
+    head_c  = "#00ffff" if dark else "#00bcd4"
 
     path       = make_path(num_cols)
     food_cells = {(c, r) for c, col in enumerate(grid) for r, d in enumerate(col) if d["count"] > 0}
     frames     = simulate(path, food_cells)
 
     total_frames = len(frames)
-    spf          = 0.06
-    total_dur    = total_frames * spf
+    total_dur    = total_frames * 0.06
     keyTimes     = ";".join(f"{i/(total_frames-1):.5f}" for i in range(total_frames))
     anim_base    = f'dur="{total_dur:.2f}s" repeatCount="indefinite" keyTimes="{keyTimes}" calcMode="discrete"'
 
@@ -118,7 +112,7 @@ def generate_svg(grid, dark=False):
                 name = datetime.strptime(col[0]["date"], "%Y-%m-%d").strftime("%b")
                 labels.append((c, name))
 
-    # When is each food cell eaten?
+    # When each food cell is eaten
     eat_frame = {}
     for fi, body in enumerate(frames):
         pos = body[0]
@@ -128,12 +122,6 @@ def generate_svg(grid, dark=False):
     svg = []
     svg.append(f'<svg viewBox="0 0 {W} {H}" xmlns="http://www.w3.org/2000/svg">')
     svg.append(f'<rect width="{W}" height="{H}" fill="{bg}" rx="6"/>')
-    svg.append('''<defs>
-  <filter id="hglow" x="-50%" y="-50%" width="200%" height="200%">
-    <feGaussianBlur in="SourceGraphic" stdDeviation="2.5" result="blur"/>
-    <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
-  </filter>
-</defs>''')
 
     # Month labels
     for c, name in labels:
@@ -147,11 +135,10 @@ def generate_svg(grid, dark=False):
             y = MY + r * STEP
             color = cell_color(day["count"], day["color"], dark)
             if (c, r) in food_cells:
-                fi   = eat_frame.get((c, r), total_frames)
-                t0   = fi / (total_frames - 1)
-                t1   = min((fi + 1) / (total_frames - 1), 1.0)
-                kts  = f"0;{t0:.5f};{t1:.5f};1"
-                # fill switches from food color to empty color when eaten (no dark hole)
+                fi    = eat_frame.get((c, r), total_frames)
+                t0    = fi / (total_frames - 1)
+                t1    = min((fi + 1) / (total_frames - 1), 1.0)
+                kts   = f"0;{t0:.5f};{t1:.5f};1"
                 fills = f"{color};{color};{empty_c};{empty_c}"
                 svg.append(
                     f'<rect x="{x}" y="{y}" width="{CELL}" height="{CELL}" rx="2" fill="{color}">'
@@ -162,35 +149,49 @@ def generate_svg(grid, dark=False):
             else:
                 svg.append(f'<rect x="{x}" y="{y}" width="{CELL}" height="{CELL}" rx="2" fill="{empty_c}"/>')
 
-    # Snake segments — SQUARE shape
+    # Snake segments — square, tapering toward tail
     max_len = 4 + len(food_cells)
-    SZ = CELL  # snake segment size = same as grid cell
 
     for seg in range(max_len):
         is_head = seg == 0
-        xs, ys, ops = [], [], []
+        xs, ys, ops, szs = [], [], [], []
 
         for body in frames:
-            if seg < len(body):
+            body_len = len(body)
+            if seg < body_len:
                 xs.append(str(MX + body[seg][0] * STEP))
                 ys.append(str(MY + body[seg][1] * STEP))
                 ops.append("1")
+                # taper: head=CELL, tail tapers down to CELL-4
+                # position along body as fraction 0..1
+                frac = seg / max(body_len - 1, 1)
+                sz = max(CELL - round(frac * 4), CELL - 4)
+                szs.append(str(sz))
             else:
                 xs.append(str(MX + body[0][0] * STEP))
                 ys.append(str(MY + body[0][1] * STEP))
                 ops.append("0")
-
-        fill = head_c if is_head else snake_c
-        filt = ' filter="url(#hglow)"' if is_head else ""
-        rx   = "2" if is_head else "1"
+                szs.append(str(CELL))
 
         ix = MX + frames[0][0][0] * STEP
         iy = MY + frames[0][0][1] * STEP
 
+        # Offset x/y so segment is centered in cell when smaller
+        # We animate x/y with offset based on size
+        adj_xs = []
+        adj_ys = []
+        for xi, yi, sz in zip(xs, ys, szs):
+            offset = (CELL - int(sz)) // 2
+            adj_xs.append(str(int(xi) + offset))
+            adj_ys.append(str(int(yi) + offset))
+
         svg.append(
-            f'<rect x="{ix}" y="{iy}" width="{SZ}" height="{SZ}" rx="{rx}" fill="{fill}"{filt} opacity="0">'
-            f'<animate attributeName="x" {anim_base} values="{";".join(xs)}"/>'
-            f'<animate attributeName="y" {anim_base} values="{";".join(ys)}"/>'
+            f'<rect x="{ix}" y="{iy}" width="{CELL}" height="{CELL}" rx="2" '
+            f'fill="{head_c if is_head else snake_c}" opacity="0">'
+            f'<animate attributeName="x" {anim_base} values="{";".join(adj_xs)}"/>'
+            f'<animate attributeName="y" {anim_base} values="{";".join(adj_ys)}"/>'
+            f'<animate attributeName="width" {anim_base} values="{";".join(szs)}"/>'
+            f'<animate attributeName="height" {anim_base} values="{";".join(szs)}"/>'
             f'<animate attributeName="opacity" {anim_base} values="{";".join(ops)}"/>'
             f'</rect>'
         )
