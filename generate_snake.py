@@ -71,7 +71,7 @@ def make_food_path(food_cells, num_cols):
     foods = sorted(food_cells, key=lambda x: (x[0], x[1]))
     # Find leftmost column that has food, then topmost row in that column
     min_col = min(c for c, r in food_cells)
-    start = min((c, r) for c, r in food_cells if c == min_col, key=lambda x: x[1])
+    start = min(((c, r) for c, r in food_cells if c == min_col), key=lambda x: x[1])
 
     # Greedy nearest neighbor through all food cells
     path = [start]
