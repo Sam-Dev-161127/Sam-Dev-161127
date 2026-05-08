@@ -80,17 +80,22 @@ def simulate(path, food_cells, init_len=4):
     return frames
 
 # ── Color maps ───────────────────────────────────────────────────────────────
-def map_color(count, dark):
+def map_color(count, api_color, dark):
+    # Use api_color directly for light mode (it's already correct GitHub green)
+    # For dark mode, remap to dark palette based on count
     if count == 0:
         return "#161b22" if dark else "#ebedf0"
-    elif count <= 3:
-        return "#0e4429" if dark else "#9be9a8"
+    if not dark:
+        return api_color  # GitHub API returns correct light-mode colors
+    # dark mode remapping
+    if count <= 3:
+        return "#0e4429"
     elif count <= 6:
-        return "#006d32" if dark else "#40c463"
+        return "#006d32"
     elif count <= 9:
-        return "#26a641" if dark else "#30a14e"
+        return "#26a641"
     else:
-        return "#39d353" if dark else "#216e39"
+        return "#39d353"
 
 # ── Generate SVG ─────────────────────────────────────────────────────────────
 def generate_svg(grid, dark=False):
@@ -155,17 +160,17 @@ def generate_svg(grid, dark=False):
         for r, day in enumerate(col):
             x = MX + c * STEP
             y = MY + r * STEP
-            color = map_color(day["count"], dark)
+            color = map_color(day["count"], day["color"], dark)
             if (c, r) in food_cells:
                 fi = eat_frame.get((c, r), total_frames)
                 t0 = fi / (total_frames - 1)
                 t1 = min((fi + 1) / (total_frames - 1), 1.0)
-                kts  = f"0;{t0:.5f};{t1:.5f};1"
-                vals = "1;1;0;0"
+                kts   = f"0;{t0:.5f};{t1:.5f};1"
+                fills = f"{color};{color};{empty_c};{empty_c}"
                 svg.append(
                     f'<rect x="{x}" y="{y}" width="{CELL}" height="{CELL}" rx="2" fill="{color}">'
-                    f'<animate attributeName="opacity" dur="{total_dur:.2f}s" repeatCount="indefinite" '
-                    f'keyTimes="{kts}" values="{vals}" calcMode="discrete"/>'
+                    f'<animate attributeName="fill" dur="{total_dur:.2f}s" repeatCount="indefinite" '
+                    f'keyTimes="{kts}" values="{fills}" calcMode="discrete"/>'
                     f'</rect>'
                 )
             else:
