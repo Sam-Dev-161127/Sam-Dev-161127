@@ -2,7 +2,7 @@
   <tr>
     <td width="70%" style="background-color:#1a1b27; color:#a9b1d6; border: 1px solid #00FFFF33; border-radius:8px;">
       <h1>Hey 👋 What's up? 😄</h1>
-      <h1>Hi Guys!! 🎉✨</h1>
+      <h1>Guys!! 🎉✨</h1>
       <h2 style="color:#00FFFF;">👨‍💻 About Me:</h2>
       Hi, I'm Sameer Patra 👋, a student 🎓 from Balasore, Odisha, India 🇮🇳.<br>
       Email me 👉 sam.dev1611@gmail.com
