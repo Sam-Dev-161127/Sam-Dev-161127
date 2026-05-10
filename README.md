@@ -74,12 +74,7 @@
   <tr>
     <td colspan="2" align="center" style="background-color:#1a1b27; border: 1px solid #00FFFF33; border-radius:8px;">
       <h2 style="color:#00FFFF;">👾 Pacman Contribution:</h2>
-      <picture>
-        <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/Sam-Dev-161127/Sam-Dev-161127/output/pacman-contribution-graph-dark.gif"/>
-        <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/Sam-Dev-161127/Sam-Dev-161127/output/pacman-contribution-graph.gif"/>
-        <img alt="pacman contribution graph" src="https://raw.githubusercontent.com/Sam-Dev-161127/Sam-Dev-161127/output/pacman-contribution-graph.gif"/>
-      </picture>
+      <img src="https://pacman.abozanona.me?username=Sam-Dev-161127" alt="pacman contribution graph"/>
     </td>
   </tr>
 </table>
- 
