@@ -1,34 +1,19 @@
-name: Generate Growing Snake
-
+name: Generate Snake
 on:
   schedule:
     - cron: "0 0 * * *"
   workflow_dispatch:
-
 jobs:
   build:
     runs-on: ubuntu-latest
-
     steps:
-      - name: Checkout repo
-        uses: actions/checkout@v4
-
-      - name: Set up Python
-        uses: actions/setup-python@v5
+      - uses: Platane/snk@v3
         with:
-          python-version: "3.11"
-
-      - name: Install dependencies
-        run: pip install requests
-
-      - name: Generate growing snake SVG
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          GITHUB_USER: Sam-Dev-161127
-        run: python generate_snake.py
-
-      - name: Deploy to output branch
-        uses: crazy-max/ghaction-github-pages@v4
+          github_user_name: Sam-Dev-161127
+          outputs: |
+            dist/github-contribution-grid-snake.svg
+            dist/github-snake-dark.svg?palette=github-dark
+      - uses: crazy-max/ghaction-github-pages@v3
         with:
           target_branch: output
           keep_history: true
