@@ -55,10 +55,8 @@
     <td colspan="2" style="background-color:#1a1b27; color:#a9b1d6; border: 1px solid #00FFFF33; border-radius:8px;">
       <h2 style="color:#00FFFF;">🏆 Certifications:</h2>
       <a href="https://coursera.org/verify/IKPW8JE4BPJP">
-        <img src="https://img.shields.io/badge/Google-Crash%20Course%20on%20Python-4285F4?style=for-the-badge&logo=google&logoColor=white"/>
+        <img src="https://img.shields.io/badge/Google-Crash%20Course%20on%20Python-4285F4?style=for-the-badge&logo=google&logoColor=white&labelColor=EA4335&color=4285F4" />
       </a>
-      &nbsp; Crash Course on Python — authorized by Google &nbsp;|&nbsp; 
-      <a href="https://coursera.org/verify/IKPW8JE4BPJP" style="color:#00FFFF;">Verify: IKPW8JE4BPJP</a>
     </td>
   </tr>
   <tr>
@@ -74,11 +72,7 @@
   <tr>
     <td colspan="2" align="center" style="background-color:#1a1b27; border: 1px solid #00FFFF33; border-radius:8px;">
       <h2 style="color:#00FFFF;">🐍 Contribution Snake:</h2>
-      <picture>
-        <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/Sam-Dev-161127/Sam-Dev-161127/output/github-snake-dark.svg"/>
-        <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/Sam-Dev-161127/Sam-Dev-161127/output/github-contribution-grid-snake.svg"/>
-        <img alt="snake animation" src="https://raw.githubusercontent.com/Sam-Dev-161127/Sam-Dev-161127/output/github-contribution-grid-snake.svg"/>
-      </picture>
+      <img src="https://raw.githubusercontent.com/Sam-Dev-161127/Sam-Dev-161127/output/github-snake-dark.svg" alt="snake animation"/>
     </td>
   </tr>
   <tr>
