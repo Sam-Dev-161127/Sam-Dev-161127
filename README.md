@@ -52,6 +52,16 @@
     </td>
   </tr>
   <tr>
+    <td colspan="2" style="background-color:#1a1b27; color:#a9b1d6; border: 1px solid #00FFFF33; border-radius:8px;">
+      <h2 style="color:#00FFFF;">🏆 Certifications:</h2>
+      <a href="https://coursera.org/verify/IKPW8JE4BPJP">
+        <img src="https://img.shields.io/badge/Google-Crash%20Course%20on%20Python-4285F4?style=for-the-badge&logo=google&logoColor=white"/>
+      </a>
+      &nbsp; Crash Course on Python — authorized by Google &nbsp;|&nbsp; 
+      <a href="https://coursera.org/verify/IKPW8JE4BPJP" style="color:#00FFFF;">Verify: IKPW8JE4BPJP</a>
+    </td>
+  </tr>
+  <tr>
     <td colspan="2" align="center" style="background-color:#1a1b27; border: 1px solid #00FFFF33; border-radius:8px;">
       <h2 style="color:#00FFFF;">🔥 My Stats:</h2>
       <img src="https://my-readme-stats-zeta.vercel.app/api?username=Sam-Dev-161127&show_icons=true&theme=tokyonight&hide_border=true&title_color=00FFFF&icon_color=00FFFF&ring_color=FF0000&text_color=00FF00" height="150"/>
