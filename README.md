@@ -71,12 +71,6 @@
   </tr>
   <tr>
     <td colspan="2" align="center" style="background-color:#1a1b27; border: 1px solid #00FFFF33; border-radius:8px;">
-      <h2 style="color:#00FFFF;">🐍 Contribution Snake:</h2>
-      <img src="https://raw.githubusercontent.com/Sam-Dev-161127/Sam-Dev-161127/output/github-snake-dark.svg" alt="snake animation"/>
-    </td>
-  </tr>
-  <tr>
-    <td colspan="2" align="center" style="background-color:#1a1b27; border: 1px solid #00FFFF33; border-radius:8px;">
       <h2 style="color:#00FFFF;">👾 Pacman Contribution:</h2>
       <img src="https://pacman.abozanona.me?username=Sam-Dev-161127" alt="pacman contribution graph"/>
     </td>
