@@ -1,8 +1,8 @@
 <table width="100%" cellspacing="0" cellpadding="12" style="background-color:#1a1b27; border-radius:10px; border: 1px solid #00FFFF33;">
   <tr>
     <td width="50%" style="background-color:#1a1b27; color:#a9b1d6; border: 1px solid #00FFFF33; border-radius:8px;">
-      <h1>Hey 👋 What's up? 😄</h1>
-      <h1>Guys!! 🎉✨</h1>
+      <h1 style="color:#00FFFF;">Hey 👋 What's up? 😄</h1>
+      <h1 style="color:#00FFFF;">Guys!! 🎉✨</h1>
       <h2 style="color:#00FFFF;">👨‍💻 About Me:</h2>
       Hi, I'm Sameer Patra 👋, a student 🎓 from Balasore, Odisha, India 🇮🇳.<br>
       Email me 👉 sam.dev1611@gmail.com
@@ -15,7 +15,7 @@
     </td>
     <td width="50%" align="center" valign="middle" style="background-color:#1a1b27; border: 1px solid #00FFFF33; border-radius:8px;">
       <img src="https://github.com/Anmol-Baranwal/Cool-GIFs-For-GitHub/assets/74038190/0c7eb6ed-663b-4ce4-bfbd-18239a38ba1b" width="100%"/><br><br>
-      <img src="https://github.com/Anmol-Baranwal/Cool-GIFs-For-GitHub/assets/74038190/80728820-e06b-4f96-9c9e-9df46f0cc0a5" width="100%"/>
+      <img src="https://user-images.githubusercontent.com/74038190/225813708-98b745f2-7d22-48cf-9150-083f1b00d6c9.gif" width="100%"/>
     </td>
   </tr>
   <tr>
